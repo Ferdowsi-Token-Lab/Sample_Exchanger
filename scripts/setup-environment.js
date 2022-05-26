@@ -32,7 +32,10 @@ async function main() {
 		b.approve(token_exchanger.address,500)
 			.then((tx) => { console.log("500 tokenB approved from ",account.address ,"to exchanger_token")});
 	});
-
+	const signers = await hre.ethers.getSigners();
+	const t = token_exchanger.connect(signers[1]);
+	t.propose(tokenA.address,100,tokenB.address,100);
+	console.log("100 tokens proposed from ",signers[1].address);
 }
 main().catch((error) => {
 	console.error(error);

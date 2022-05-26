@@ -72,7 +72,7 @@ contract token_exchanger {
 
         bool b1 = IERC20(d.asset1).transferFrom(
             d.account1,
-            d.account2,
+            msg.sender,
             d.amount1
         );
         if (b1) {

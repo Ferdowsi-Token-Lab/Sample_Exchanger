@@ -7,3 +7,24 @@ __pycache__
 production_settings.py
 
 .vscode/
+
+# ES-Lint
+.eslintcache
+
+# Solidity-Coverage
+allFiredEvents
+scTopics
+scDebugLog
+coverage.json
+coverage/
+coverageEnv/
+
+node_modules
+
+#Buidler files
+cache
+artifacts
+.openzeppelin
+
+# env
+.env
